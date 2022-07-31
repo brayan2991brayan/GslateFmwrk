@@ -12,7 +12,6 @@ public class LoginTest  extends WeaverBase {
         //Enter code to call the page object methods and complete the test
         LoginPage.DisableNotifications();
         LoginPage.enterCredentials(driver);
-        LoginPage.DisableNotifications();
         LoginPage.sendCredentials(driver);
     }
 
