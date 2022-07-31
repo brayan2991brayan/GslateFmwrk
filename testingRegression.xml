@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression TestSuite">
+    <test name="GroupsDemo">
+        <groups>
+            <define name="all">
+                <include name="Regression"></include>
+                <include name="Smoke"></include>
+            </define>
+            <define name="Regression">
+                <include name="Regression"></include>
+            </define>
+            <define name="Smoke">
+                <include name="Regression"></include>
+            </define>
+            <run>
+                <include name="Smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="pageObjectModel.suiteTests.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
